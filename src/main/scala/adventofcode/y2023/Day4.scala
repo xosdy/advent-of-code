@@ -1,4 +1,4 @@
-package y2023
+package adventofcode.y2023
 
 object Day4:
   def main(args: Array[String]): Unit =
@@ -33,8 +33,6 @@ object Day4:
             .drop(1)
             .padTo(math.max(1, winning), 1)
             .zipWithIndex
-            .map((copy, i) =>
-              if i < winning then copy + currCopy else copy
-            )
+            .map((copy, i) => if i < winning then copy + currCopy else copy)
           (totalCards + currCopy, restCopy)
       ._1

@@ -1,4 +1,6 @@
-package y2023
+package adventofcode.y2023
+
+import adventofcode.Vec2
 
 object Day3:
   def main(args: Array[String]): Unit =
@@ -10,8 +12,8 @@ object Day3:
     case Number(value: Int)
     case Symbol(value: Char)
 
-  private case class Vec2(x: Int, y: Int)
   private type Grid = Map[Vec2, Object]
+
   private def parse(lines: Iterator[String]): Grid =
     val objectRegex = raw"(\d+)|[^.\d]".r
     (for

@@ -1,4 +1,4 @@
-package y2023
+package adventofcode.y2023
 
 object Day2:
   def main(args: Array[String]): Unit =
